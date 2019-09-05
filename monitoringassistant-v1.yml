@@ -11,7 +11,7 @@ os:
       direct_boot_package: "com.iheartlives.monitor" #Boots directly to specified app and locks it into kiosk mode
       disable_status_bar: true #disables the status bar for locked down experience
       disable_camera: true #Removes camera from the OS
-      #disable_screen_capture: true #Disables screen shots 
+      disable_screen_capture: true #Disables screen shots
 
     settings:
       config_default_tile_list: #List of settings made available on device
