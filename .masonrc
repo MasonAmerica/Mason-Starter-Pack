@@ -1,3 +1,7 @@
 {
-  "apps": "apps"
+  "apps": "apps",
+  "bootanimations": {
+    "name": "iheartlives-anim",
+    "file": "media/bootanimation.zip"
+  }
 }
