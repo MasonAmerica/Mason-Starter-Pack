@@ -1,0 +1,46 @@
+apps:
+  - name: iHeartLives
+    package_name: com.iheartlives.monitor
+    version_code: latest
+
+os:
+  name: # FILL IN Project Name 
+  version: latest # Project Version -- Automatically increments on each registration
+
+  configurations:
+    mason-management:
+      # Boots directly to the specified app and locks it into kiosk mode
+      direct_boot_package: "com.iheartlives.monitor"
+      # Disables the status bar for a locked down experience
+      disable_status_bar: true
+      # Removes the camera from the OS
+      disable_camera: true
+      # Prevents taking screen shots
+      disable_screen_capture: true
+
+    settings:
+      # List of settings made available on device
+      config_default_tile_list:
+        - wifi
+        - bluetooth
+        - sim
+        - about
+
+    android: # Modifies core Android functionality
+      config_lowBatteryWarningLevel: 25 # Shows low battery warning at 25%
+      config_supportAutoRotation: false
+      config_shortPressOnPowerBehavior: 1 # Sleeps device on single short press
+      config_cameraDoubleTapPowerGestureEnabled: false # Prevents camera launch on double tap
+
+    mason-fota: # Controls how the OS is updated
+      config_allow_download_over_metered: true # Allows updates over cellular
+      config_update_prompt_prior_to_install: false # Disable prompt so users cannot cancel an update
+      config_show_download_in_downloads_ui: true
+
+    mason-app-updater: # Controls how apps are updated
+      config_allow_download_over_metered: true # Allows updates over cellular
+
+media:
+  bootanimation:
+    name: iheartlives-anim
+    version: latest
